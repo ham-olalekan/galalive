@@ -57,17 +57,17 @@ This service contains a bunch of endpoints for as listed below:
   HTTP Method: POST
   Sample request: {}
 
-  Sample Response:
-  {
-  "status": true,
-  "message": "sales created successfully",
-  "data": {
-  "showId": "1",
-  "itemId": "12345",
-  "quantity": 1,
-  "itemName": "Fancy Dresses"
-  }
-  }
+                Sample Response:
+                {
+                    "status": true,
+                    "message": "sales created successfully",
+                    "data": {
+                    "showId": "1",
+                    "itemId": "12345",
+                    "quantity": 1,
+                    "itemName": "Fancy Dresses"
+                    }
+                }
 
 - `localhost:8080/api/sales/show/1/buy_item/12345`
   Return the name and quantity of item_id sold by show_ID.
