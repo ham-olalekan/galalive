@@ -57,9 +57,14 @@ const getAllInventory = () => {
   return inventoryList;
 };
 
+const deleteAll = () => {
+  inventoryList = [];
+};
+
 module.exports = {
   updateInventory,
   getAllInventory,
   getByItemId,
   addNewInventory,
+  deleteAll,
 };

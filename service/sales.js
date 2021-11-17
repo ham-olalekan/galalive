@@ -78,12 +78,14 @@ const getSummaryOfSalesForItemAtShow = (showId, itemId) => {
     if (!itemInventory) {
       throw new NotFoundError("Invalid item");
     }
+    summaryObj.showId = showId;
     summaryObj.itemName = itemInventory.itemName;
     summaryObj.itemId = itemInventory.itemId;
     summaryObj.quantity_sold = 0;
     return result.push(summaryObj);
   }
 
+  summaryObj.showId = showId;
   summaryObj.itemName = saleAtShowWithItem[0].itemName;
   summaryObj.itemId = saleAtShowWithItem[0].itemId;
   summaryObj.quantity_sold = saleAtShowWithItem.length;
@@ -104,9 +106,6 @@ const getShowSalesSummary = (showId) => {
   if (allSalesFromShow.length == 0) {
     return summaryResult;
   }
-
-  
-
 };
 
 /**
@@ -118,8 +117,14 @@ const getAllSales = () => {
   return salesList;
 };
 
+const saveSale = (sale) => {
+  return salesList.push(sale);
+};
+
 module.exports = {
   createShowSale,
   fetchSalesFromShow,
   getSummaryOfSalesForItemAtShow,
+  saveSale,
+  getAllSales,
 };

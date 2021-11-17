@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "author": "Olalekan Lukman",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jest": "^27.3.1"
   }
 }
