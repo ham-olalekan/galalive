@@ -18,7 +18,7 @@
 
 ### Terminating the service
 
-- Press `cmd + c`
+- Press `control + c`
 
 ## Test your service
 
