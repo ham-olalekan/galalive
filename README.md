@@ -6,6 +6,10 @@
 
 - Run `npm i` to install the project dependencies
 
+### Run Test
+
+- Run `npm test` all test cases should pass
+
 ### Starting the service
 
 - Run `npm start` to start the application. The application starts on port 8080 by default.
