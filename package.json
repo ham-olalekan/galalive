@@ -1,0 +1,15 @@
+{
+  "name": "galalive",
+  "version": "1.0.0",
+  "description": "Simple application for Galalive assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start":"node index.js"
+  },
+  "author": "Olalekan Lukman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
