@@ -8,7 +8,7 @@ class NotFoundError extends Error {
 class OutOfStockError extends Error {
   constructor(message) {
     super(message);
-    this.name = "NotFoundError";
+    this.name = "OutOfStockError";
   }
 }
 

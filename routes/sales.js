@@ -33,4 +33,19 @@ router.get("/show/:show_ID/sold_items/:item_ID", (req, res) => {
   }
 });
 
+router.get("/show/:show_ID/sold_items", (req, res) => {
+  const { show_ID } = req.params;
+  try {
+    const data = salesService.getShowSalesSummary(show_ID);
+    return res.status(200).send({
+      status: true,
+      message: "successful",
+      data,
+    });
+  } catch (err) {
+    console.log("get item sales failed with error: ", err.message);
+    return sendApiError(res, err);
+  }
+});
+
 module.exports = router;

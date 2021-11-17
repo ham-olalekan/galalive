@@ -106,6 +106,32 @@ const getShowSalesSummary = (showId) => {
   if (allSalesFromShow.length == 0) {
     return summaryResult;
   }
+
+  //refactor this block
+  let added = {};
+  let currentItemId;
+  for (let i = 0; i < allSalesFromShow.length; i++) {
+    const currentSale = allSalesFromShow[i];
+    const summaryObj = {
+      itemName: currentSale.itemName,
+      itemId: currentSale.itemId,
+      showId: currentSale.showId,
+    };
+    let quantity = 0;
+    for (let j = 0; j < allSalesFromShow.length; j++) {
+      currentItemId = allSalesFromShow[j].itemId;
+      if (currentSale.itemId == currentItemId) {
+        quantity++;
+      }
+    }
+    if (!added[currentItemId]) {
+      added[currentItemId] = currentItemId;
+      summaryObj.quantity_sold = quantity;
+      summaryResult.push(summaryObj);
+    }
+  }
+  added = {};
+  return summaryResult;
 };
 
 /**
