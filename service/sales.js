@@ -127,4 +127,5 @@ module.exports = {
   getSummaryOfSalesForItemAtShow,
   saveSale,
   getAllSales,
+  getShowSalesSummary,
 };
